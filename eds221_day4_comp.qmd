@@ -30,7 +30,7 @@ monthly_income <- c(42.50, 48, 42)
 double_value(monthly_income)
 ```
 
-### create a function that returns an awesome restaurant name 
+### create a function that returns an awesome restaurant name
 
 ```{r}
 name_restaurant <- function(animal, food) {
