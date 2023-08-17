@@ -67,3 +67,35 @@ double_value2 <- function(dollars) {
 
 double_value2(dollars = 20)
 ```
+
+## Functions with conditionals
+
+```{r}
+calculate_animal_age <- function(species, age_human_yrs) {
+  if (species == "dog") {
+    age_human_yrs * 7
+  } else if (species == "goat") {
+    age_human_yrs * 4.7
+  } else {
+    print("no can do")
+  }
+}
+
+calculate_animal_age(species = "whale", age_human_yrs = 4)
+```
+
+#### write a function that given temperature in Kelvin, if a user selects "metric", then return Celsius. If they select "English", then return degrees in Fahrenheit
+
+```{r}
+convert_Kelvin <- function(system, temp) {
+  if (system == "metric") {
+    temp - 273.15
+  } else if (system == "English") {
+    ((temp - 273.15) * 1.8) +32
+  } else {
+    print("scale not recognized")
+  }
+}
+
+convert_Kelvin(system = "idk", temp = 90)
+```
