@@ -139,3 +139,28 @@ df_means(df = mtcars)
 
 df_means(df = faithful)
 ```
+
+writing a function to calculate the betz limit
+
+air density - kg/m\^3
+
+rotor radius - meter
+
+wind velocity - m/s
+
+```{r}
+# built-in value for pi in R
+calculate_betz <- function(air_density, rotor_radius, wind_velocity) {
+  if (wind_velocity > 130) {
+    warning("Whoa, that's super high. Are you sure?")
+  } 
+  if (rotor_radius < 0) {
+    stop("rotor_radius must be a positive value(meters)")
+  }
+  0.3 * air_density * pi * (rotor_radius) ^ 2 * (wind_velocity) ^ 3
+}
+
+calculate_betz(air_density = 1.2, rotor_radius = 15, wind_velocity = 50)
+
+calculate_betz(air_density = 1.2, rotor_radius = 5, wind_velocity = 150)
+```
