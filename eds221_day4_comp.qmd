@@ -1,0 +1,69 @@
+---
+title: "EDS 221 Day 4 Comp"
+format: html
+editor: visual
+---
+
+## Functions
+
+#### make a function that doubles a value
+
+```{r}
+double_value <- function(my_dollars) {
+  print(2 * my_dollars)
+}
+
+double_value(9)
+
+# accomplishes the same thing, don't need the print statement
+double_value2 <- function(dollars) {
+  dollars * 2
+}
+
+double_value2(dollars = 20)
+```
+
+```{r}
+# can input a vector into a function 
+monthly_income <- c(42.50, 48, 42)
+
+double_value(monthly_income)
+```
+
+### create a function that returns an awesome restaurant name 
+
+```{r}
+name_restaurant <- function(animal, food) {
+  print(paste0(animal, food))
+}
+
+name_restaurant("Dog", "Beans")
+```
+
+#### given temp in Fahrenheit, write a function that converts it to celsius
+
+```{r}
+f_to_c <- function(temp_f) {
+  print((5 / 9) * (temp_f - 32))
+}
+
+f_to_c(temp_f = 32)
+```
+
+### create a function that given inputs of age and hometown, returns "I am this years old, and I'm from this town"
+
+```{r}
+age_and_town <- function(age, town) {
+  print(paste0("I am ", age, " years old, and I am from ", town, "."))
+}
+
+age_and_town(age = 23, town = "Los Angeles")
+```
+
+```{r}
+double_value2 <- function(dollars) {
+  dollars * 2
+}
+
+double_value2(dollars = 20)
+```
